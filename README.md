@@ -12,13 +12,9 @@ In order to install go: [follow instructions](https://golang.org/dl/).
 No external library or dependency is used therefore, 
 with the assumption that go is installed you can run the program simply by
 
-`mkdir -p go/src/github.com/erdemtoraman`
-
-`cd go/src/github.com/erdemtoraman/`
-
-`git clone https://github.com/erdemtoraman/opening-hours.git`
-
-`cd opening-hours`
+`go get "github.com/erdemtoraman/opening-hours"`
+ 
+`cd /go/src/github.com/erdemtoraman/opening-hours`
 
 `make install`
 
@@ -31,3 +27,7 @@ Try out the example files
 `make run/examples/2.in`
 
 `make run/examples/3.in`
+
+To run your own files
+
+`make run/filepath` where filepath is to the path the the input file
