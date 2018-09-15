@@ -20,7 +20,7 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	timeline, err := input.ConvertToTimeline()
+	timeline, err := input.ToTimeline()
 	if err != nil {
 		log.Fatalln(err)
 	}

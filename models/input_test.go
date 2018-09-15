@@ -21,7 +21,7 @@ func TestOpeningHours_ConvertToTimeline(t *testing.T) {
 		"Saturday":  Events{Event{Type: Open, Value: 3600}, Event{Type: Close, Value: 36000}},
 		"Sunday":    Events{Event{Type: Open, Value: 3600}, Event{Type: Close, Value: 36000}},
 	}
-	timeline, err := openingHoursInput.ConvertToTimeline()
+	timeline, err := openingHoursInput.ToTimeline()
 	assert.NoError(t, err)
 	for i := 0; i < len(timeline)-1; i++ {
 		duration := timeline[i]
@@ -50,7 +50,7 @@ func TestTimeline_ToOutputFormat(t *testing.T) {
 		assert.NoError(t, err)
 		expectedResult, err := ioutil.ReadFile(outputFiles[key])
 		assert.NoError(t, err)
-		timeline, err := openingHoursInput.ConvertToTimeline()
+		timeline, err := openingHoursInput.ToTimeline()
 		assert.NoError(t, err)
 		result := timeline.ToOutputFormat().String()
 		assert.Equal(t, string(expectedResult), result)
