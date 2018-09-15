@@ -32,6 +32,9 @@ func (o OpeningHours) ConvertToTimeline() (Timeline, error) {
 	for i := 0; i < len(events); i += 2 {
 		eventOpen := events[i]
 		eventClose := events[i+1]
+		if eventOpen.Type != Open || eventClose.Type != Close {
+			return timeline, errors.New("open and close events are not given in order")
+		}
 		timeline = append(timeline, OpenDuration{Open: eventOpen.Time, Close: eventClose.Time})
 	}
 	return timeline, nil
@@ -45,7 +48,7 @@ func (o OpeningHours) toEventStreamWithCorrectedDateValues() (Events, error) {
 			return nil, errors.New(fmt.Sprintf("Day: %s is not found in the opening hours", day))
 		}
 		for _, event := range events {
-			event.Time = time.Unix(event.Value, 0).AddDate(0, 0, dayIndex).UTC()
+			event.Time = time.Unix(event.Value, 0).AddDate(0, 0, dayIndex-3).UTC()
 			allEvents = append(allEvents, event)
 		}
 	}
