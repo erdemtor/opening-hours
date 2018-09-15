@@ -1,5 +1,6 @@
 .PHONY: install
 install:
+	go get "github.com/erdemtoraman/opening-hours"
 	go get "github.com/stretchr/testify/assert"
 
 .PHONY: run
