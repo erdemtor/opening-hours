@@ -1,4 +1,12 @@
-# opening-hours
+# Opening Hours
+
+
+## Go
+
+In order to install go: [follow instructions](https://golang.org/dl/).
+
+
+## Running the Program
 
 No external library or dependency is used therefore, 
 with the assumption that go is installed you can run the program simply by
@@ -7,13 +15,14 @@ with the assumption that go is installed you can run the program simply by
 
 Try out the example files 
 
-`go run main.go -file examples/1.in`
+`make run/examples/1.in`
 
-`go run main.go -file examples/2.in`
+`make run/examples/2.in`
 
-`go run main.go -file examples/3.in`
+`make run/examples/3.in`
 
+## Tests
 
-## Go
+Run the tests simply
 
-In order to install go: [follow instructions](https://golang.org/dl/).
+`make test`
