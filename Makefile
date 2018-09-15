@@ -1,6 +1,6 @@
 .PHONY: install
 install:
-	go get ./...
+	go get "github.com/stretchr/testify/assert"
 
 .PHONY: run
 run/%:

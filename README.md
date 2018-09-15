@@ -12,7 +12,17 @@ In order to install go: [follow instructions](https://golang.org/dl/).
 No external library or dependency is used therefore, 
 with the assumption that go is installed you can run the program simply by
 
-`go run main.go -file pathoffile`
+`mkdir -p go/src/github.com/erdemtoraman`
+
+`cd go/src/github.com/erdemtoraman/`
+
+`git clone https://github.com/erdemtoraman/opening-hours.git`
+
+`cd opening-hours`
+
+`make install`
+
+`make test`
 
 Try out the example files 
 
@@ -21,9 +31,3 @@ Try out the example files
 `make run/examples/2.in`
 
 `make run/examples/3.in`
-
-## Tests
-
-Run the tests simply
-
-`make test`
