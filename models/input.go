@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+//OpeningHours represents the input json object
 type OpeningHours map[string]Events
 
 type Events []Event
