@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"github.com/erdemtoraman/opening-hours/helper"
 	"github.com/erdemtoraman/opening-hours/models"
 	"log"
@@ -18,11 +19,13 @@ func main() {
 	input := models.OpeningHours{}
 	err := helper.ReadFromFileAndPopulateDTO(filepath, &input)
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
+		return
 	}
 	timeline, err := input.ToTimeline()
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
+		return
 	}
-	log.Println(timeline.ToOutputFormat().String())
+	fmt.Println(timeline.ToOutputFormat().String())
 }

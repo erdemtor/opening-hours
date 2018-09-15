@@ -49,7 +49,10 @@ func (o OpeningHours) toEventStreamWithCorrectedDateValues() (Events, error) {
 			return nil, errors.New(fmt.Sprintf("Day: %s is not found in the opening hours", day))
 		}
 		for _, event := range events {
-			event.Time = time.Unix(event.Value, 0).AddDate(0, 0, dayIndex-3).UTC() // 1.1.1970 is a thursday, subtract 3 days to set the first day to monday
+			event.Time = time.
+				Unix(event.Value, 0).
+				AddDate(0, 0, dayIndex-3).
+				UTC() // 1.1.1970 is a thursday, subtract 3 days to set the first day to monday
 			allEvents = append(allEvents, event)
 		}
 	}

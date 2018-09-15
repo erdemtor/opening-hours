@@ -1,3 +1,6 @@
+.PHONY: install
+install:
+	go get ./...
 
 .PHONY: run
 run/%:
