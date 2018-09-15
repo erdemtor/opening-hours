@@ -1,10 +1,10 @@
 package main
 
 import (
-	"./helper"
-	"./models"
 	"flag"
 	"fmt"
+	"github.com/erdemtoraman/opening-hours/helper"
+	"github.com/erdemtoraman/opening-hours/models"
 	"log"
 )
 
