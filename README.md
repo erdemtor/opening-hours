@@ -1,5 +1,6 @@
 # Opening Hours
 
+[![codecov](https://codecov.io/gh/erdemtoraman/opening-hours/branch/master/graph/badge.svg?token=OncIXZq5Ku)](https://codecov.io/gh/erdemtoraman/opening-hours)
 
 ## Go
 
