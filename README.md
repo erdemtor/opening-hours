@@ -9,8 +9,7 @@ In order to install go: [follow instructions](https://golang.org/dl/).
 
 ## Running the Program
 
-No external library or dependency is used therefore, 
-with the assumption that go is installed you can run the program simply by
+To clone and run the program run the following commands after you've installed go.
 
 `go get "github.com/erdemtoraman/opening-hours"`
  
@@ -30,4 +29,4 @@ Try out the example files
 
 To run your own files
 
-`make run/filepath` where filepath is to the path the the input file
+`make run/filepath` where filepath is to the path to the input file
